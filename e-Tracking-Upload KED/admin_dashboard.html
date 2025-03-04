@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body class="bg-gray-100">
+    <div class="container mx-auto p-4">
+        <header class="text-center mb-4">
+            <h1 class="text-xl font-bold">e-Tracking-Upload KED</h1>
+        </header>
+        <main>
+            <div class="text-center mb-4">
+                <h2 class="text-2xl font-bold">Dashboard</h2>
+            </div>
+            <div class="flex justify-center space-x-4 mb-8">
+                <button id="tambahUserBtn" onclick="location.href='add_user.html'" class="bg-green-400 text-black font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600">Tambah User</button>
+                <button id="uploadBtn" onclick="location.href='upload.html'" class="bg-green-400 text-black font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600">Upload</button>
+                <button id="lihatDataBtn" onclick="location.href='view_data_updated.html'" class="bg-green-400 text-black font-bold py-2 px-4 rounded-full focus:outline-none focus:ring-2 focus:ring-green-600">Lihat Data</button>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-center">
+                <div>
+                    <h3 class="font-bold mb-2">User Aktif</h3>
+                    <div class="border border-black rounded-lg h-40"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">File di Upload</h3>
+                    <div class="border border-black rounded-lg h-40"></div>
+                </div>
+                <div>
+                    <h3 class="font-bold mb-2">File Gagal Upload</h3>
+                    <div class="border border-black rounded-lg h-40"></div>
+                </div>
+            </div>
+        </main>
+        <script>
+            // Example role variable, this should be set based on actual user role
+            const userRole = 'admin'; // Change this to 'user' or other roles as needed
+
+            // Enable or disable buttons based on user role
+            document.getElementById('tambahUserBtn').disabled = userRole !== 'admin';
+            document.getElementById('uploadBtn').disabled = userRole === 'user';
+            document.getElementById('lihatDataBtn').disabled = userRole === 'user';
+        </script>
+    </div>
+</body>
+</html>

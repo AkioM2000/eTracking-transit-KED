@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>e-Tracking-Upload KED</title>
+</head>
+<body class="bg-gray-100 p-4">
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded shadow">
+        <h1 class="text-center text-2xl font-bold mb-4">e-Tracking-Upload KED</h1>
+        <div class="grid grid-cols-1 gap-2 mb-4">
+            <div class="flex items-center mb-2">
+                <label class="mr-2">Afd</label>
+                <span>:</span>
+            </div>
+            <div>
+                <select id="afdSelect" class="border rounded-full p-1 w-full">
+                    <option value="">Select AFD</option>
+                    <option value="OA">OA</option>
+                    <option value="OB">OB</option>
+                    <option value="OC">OC</option>
+                    <option value="OD">OD</option>
+                    <option value="OE">OE</option>
+                    <option value="OF">OF</option>
+                    <option value="OG">OG</option>
+                    <option value="OH">OH</option>
+                    <option value="OI">OI</option>
+                    <option value="OJ">OJ</option>
+                    <option value="OK">OK</option>
+                    <option value="OL">OL</option>
+                    <option value="OM">OM</option>
+                    <option value="ON">ON</option>
+                    <option value="OO">OO</option>
+                    <option value="OP">OP</option>
+                    <option value="OQ">OQ</option>
+                    <option value="OR">OR</option>
+                </select>
+            </div>
+            <div class="flex items-center mb-2">
+                <label class="mr-2">Wilayah</label>
+                <span>:</span>
+            </div>
+            <div>
+                <select id="wilayahSelect" class="border rounded-full p-1 w-full">
+                    <option value="">Select Wilayah</option>
+                    <option value="Wilayah1">Wilayah1</option>
+                    <option value="Wilayah2">Wilayah2</option>
+                    <option value="Wilayah3">Wilayah3</option>
+                    <option value="Wilayah4">Wilayah4</option>
+                </select>
+            </div>
+        </div>
+        <div class="flex justify-center space-x-4 mb-4">
+            <button class="bg-green-400 text-black px-4 py-2 rounded-full" onclick="location.href='upload.html'">Upload TPN</button>
+            <button class="bg-green-400 text-black px-4 py-2 rounded-full" onclick="viewData()">Lihat Data</button>
+        </div>
+        <div class="flex justify-end mb-4">
+            <input type="text" class="border rounded-full p-1 h-8 w-full md:w-auto">
+
+            <i class="fas fa-search ml-2"></i>
+        </div>
+        <div class="overflow-x-auto mb-4">
+            <table class="min-w-full border-collapse border border-gray-400">
+                <thead>
+                    <tr class="bg-gray-300">
+                        <th class="border border-gray-400 px-4 py-2">No</th>
+                        <th class="border border-gray-400 px-4 py-2">AFD</th>
+                        <th class="border border-gray-400 px-4 py-2">Wilayah</th>
+                        <th class="border border-gray-400 px-4 py-2">Tanggal</th>
+                        <th class="border border-gray-400 px-4 py-2">Nama File</th>
+                        <th class="border border-gray-400 px-4 py-2">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                    </tr>
+                    <tr>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                        <td class="border border-gray-400 px-4 py-2"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>
